@@ -9,11 +9,11 @@ elif [ "$3" == "status" ]; then
         /usr/local/bin/aws --region us-east-1 ec2 describe-instances --query 'Reservations[*].Instances[*].[Tags[?Key==`'$1'`].Value[],State.Name,InstanceId,Tags[?Key==`Name`].Value[]]' --output text | grep -A 2 $2 | sed -e 's/'$2'//g'
 echo -e "\nDone!"
 
-elif [ "$3" = "stop" ]; then
+elif [ "$3" == "stop" ]; then
         /usr/local/bin/aws --region us-east-1 ec2 --instance-ids stop-instances ${ids}
 echo -e "\nDone!"
 
-elif [ "$3" = "start" ]; then
+elif [ "$3" == "start" ]; then
         /usr/local/bin/aws --region us-east-1 ec2 --instance-ids start-instances ${ids}
 echo -e "\nDone!"
 
