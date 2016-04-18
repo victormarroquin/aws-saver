@@ -6,9 +6,10 @@ A simple bash script to start and stop instances using tags, scheludable with cr
 - Save money on aws stoping your non production instances.
 - Check it if the selected instances are running or not.
 
-## Prerequisits:
+## Prerequisites:
 
 Have installed the aws command line (CLI).
+
 Have taged the desired instances with a specific tag.
 
 ## Usage:
