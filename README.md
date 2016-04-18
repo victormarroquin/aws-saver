@@ -16,11 +16,11 @@ Limited to linux, tested on ubuntu only.
 
   * [Create AIM user](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html)
 
-  * [Create a new policy](#Steps)
+  * [Create a new policy](#steps to create a new policy)
   
   * Attach the policiy to your user.
 
- #Steps
+ ####Steps to create a new policy
 
 Go to AWS Management Console > IAM > Policies > Create new policy > Create yout own police.
 
