@@ -22,7 +22,7 @@ To use in the easy way you can place the bash on usr/local/bin.
 
 if you prefer use other location, you can add on /etc/environment/ file on PATH variable the custom location.
 
-saver {tag_name} {tag_value} list | status | start | stop.
+saver.sh {tag_name} {tag_value} list | status | start | stop.
 
 ### list
 
@@ -44,10 +44,10 @@ Stop (power off) the instances matching with ths specified tag.
 
 In order to automate the process you could use cron.
 ```
-50 3 * * * {saver_path}/saver {tag_name} {tag_value} {action}
+50 3 * * * {saver_path}/saver.sh {tag_name} {tag_value} {action}
 ```
 Example:
 ```
-50 3 * * * /opt/tools/aws-saver/saver Saver Enable stop
-0 12 * * * /opt/tools/aws-saver/saver Saver Enable start
+50 3 * * * /opt/tools/aws-saver/saver.sh Saver Enable stop
+0 12 * * * /opt/tools/aws-saver/saver.sh Saver Enable start
 ```
