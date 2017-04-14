@@ -85,7 +85,7 @@ Stop (power off) the instances matching with ths specified tag.
 
 In order to automate the process you could use cron.
 ```
-50 3 * * * {saver_path}/saver.sh {tag_name} {tag_value} {action}
+50 3 * * * {saver_path}/saver.sh {tag_name} {tag_value} {tag_name} {tag_value} ... {action}
 ```
 Example:
 ```
