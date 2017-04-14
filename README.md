@@ -8,7 +8,7 @@ A simple bash script to start and stop instances using tags, schedulable via cro
 
 ## Limitations:
 
-Limited to linux, tested on ubuntu only.
+Limited to run on linux, tested on ubuntu only.
 
 ## Prerequisites:
 
@@ -55,7 +55,7 @@ In my case I have a condition to use the all **"Environment"** tags except **"Pr
 
 - Have installed the aws command line (CLI). If you don't have it go to [Installing the AWS Command Line Interface](http://docs.aws.amazon.com/cli/latest/userguide/installing.html)
 
-- Have taged the desired instances with a specific tag.
+- Have taged the desired instances with a specific tag or multiple tags.
 
 ## Usage:
 
@@ -63,7 +63,7 @@ To use in the easy way you can place the bash on usr/local/bin.
 
 if you prefer use other location, you can add on /etc/environment/ file on PATH variable the custom location.
 
-saver.sh {tag_name} {tag_value} list | status | start | stop.
+saver.sh {tag_name} {tag_value} {tag_name} {tag_value} ... list | status | start | stop.
 
 #### list
 
@@ -89,6 +89,6 @@ In order to automate the process you could use cron.
 ```
 Example:
 ```
-50 3 * * * /opt/tools/aws-saver/saver.sh Saver Enable stop
-0 12 * * * /opt/tools/aws-saver/saver.sh Saver Enable start
+50 3 * * * /opt/tools/aws-saver/saver.sh Saver Enable Environment Development stop
+0 12 * * * /opt/tools/aws-saver/saver.sh Saver Enable Product Biller start
 ```
