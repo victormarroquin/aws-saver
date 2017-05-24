@@ -20,7 +20,7 @@ Limited to run on linux, tested on ubuntu only.
   
   * Attach the policiy to your user.
 
- ####Steps to create a new policy
+ #### Steps to create a new policy
 
 Go to AWS Management Console > IAM > Policies > Create new policy > Create yout own police.
 
